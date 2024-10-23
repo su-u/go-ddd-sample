@@ -23,13 +23,13 @@ func NewTask(title, content string) (*Task, error) {
 	return task, nil
 }
 
-func (t *Task) Set(title, content string) (error) {
+func (t *Task) Set(title, content string) error {
 	if title == "" {
-    return errors.New("title is empty)
-  }
+		return errors.New("title is empty")
+	}
 
-  t.Title = title
-  tt.Content = content
+	t.Title = title
+	t.Content = content
 
-  return nil
+	return nil
 }
